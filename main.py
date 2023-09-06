@@ -22,16 +22,16 @@ def main():
     running = True
     while running:
 
-        radius = 100 * light_source["power"]
+        radius1 = 100 * light_source["power"]
         radius2 = 300 * light_source["power"]
         radius3 = 500 * light_source["power"]
         radius4 = 700 * light_source["power"]
 
         for x in range(len(surface_area)):
             for y in range(len(surface_area[0])):
-                if math.sqrt((x - light_source["position"]["x"]) ** 2 + (y - light_source["position"]["y"]) ** 2) <= radius:
+                if math.sqrt((x - light_source["position"]["x"]) ** 2 + (y - light_source["position"]["y"]) ** 2) <= radius1:
                     surface_area[x][y] = 1.0
-                elif radius2 >= math.sqrt((x - light_source["position"]["x"]) ** 2 + (y - light_source["position"]["y"]) ** 2) > radius:
+                elif radius2 >= math.sqrt((x - light_source["position"]["x"]) ** 2 + (y - light_source["position"]["y"]) ** 2) > radius1:
                     surface_area[x][y] = 0.75
                 elif radius3 >= math.sqrt((x - light_source["position"]["x"]) ** 2 + (y - light_source["position"]["y"]) ** 2) > radius2:
                     surface_area[x][y] = 0.5
