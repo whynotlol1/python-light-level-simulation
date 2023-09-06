@@ -29,13 +29,14 @@ def main():
 
         for x in range(len(surface_area)):
             for y in range(len(surface_area[0])):
-                if math.sqrt((x - light_source["position"]["x"]) ** 2 + (y - light_source["position"]["y"]) ** 2) <= radius1:
+                distance = math.sqrt((x - light_source["position"]["x"]) ** 2 + (y - light_source["position"]["y"]) ** 2)
+                if distance <= radius1:
                     surface_area[x][y] = 1.0
-                elif radius2 >= math.sqrt((x - light_source["position"]["x"]) ** 2 + (y - light_source["position"]["y"]) ** 2) > radius1:
+                elif radius2 >= distance > radius1:
                     surface_area[x][y] = 0.75
-                elif radius3 >= math.sqrt((x - light_source["position"]["x"]) ** 2 + (y - light_source["position"]["y"]) ** 2) > radius2:
+                elif radius3 >= distance > radius2:
                     surface_area[x][y] = 0.5
-                elif radius4 >= math.sqrt((x - light_source["position"]["x"]) ** 2 + (y - light_source["position"]["y"]) ** 2) > radius3:
+                elif radius4 >= distance > radius3:
                     surface_area[x][y] = 0.25
                 else:
                     surface_area[x][y] = 0.0
