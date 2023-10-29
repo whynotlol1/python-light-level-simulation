@@ -16,7 +16,7 @@ def main():
             "y": 50
         },
         "power": 0.1,  # float. [0.1 - 1.0] range
-        "speed": 10
+        "speed": 0.1
     }
 
     running = True
