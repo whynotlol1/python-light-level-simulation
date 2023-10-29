@@ -65,17 +65,17 @@ def main():
 
         if keys[pygame.K_UP] and light_source["position"]["y"] < len(surface_area[0]):
             light_source["position"]["y"] -= light_source["speed"]
-        elif keys[pygame.K_DOWN] and light_source["position"]["y"] > 0:
+        if keys[pygame.K_DOWN] and light_source["position"]["y"] > 0:
             light_source["position"]["y"] += light_source["speed"]
-        elif keys[pygame.K_LEFT] and light_source["position"]["x"] > 0:
+        if keys[pygame.K_LEFT] and light_source["position"]["x"] > 0:
             light_source["position"]["x"] -= light_source["speed"]
-        elif keys[pygame.K_RIGHT] and light_source["position"]["x"] < len(surface_area):
+        if keys[pygame.K_RIGHT] and light_source["position"]["x"] < len(surface_area):
             light_source["position"]["x"] += light_source["speed"]
-        elif keys[pygame.K_EQUALS] and light_source["power"] < 1:
+        if keys[pygame.K_EQUALS] and light_source["power"] < 1:
             light_source["power"] += 0.1
-        elif keys[pygame.K_MINUS] and light_source["power"] > 0.1:
+        if keys[pygame.K_MINUS] and light_source["power"] > 0.1:
             light_source["power"] -= 0.1
-        elif keys[pygame.K_ESCAPE]:
+        if keys[pygame.K_ESCAPE]:
             pygame.quit()
             running = False
 
