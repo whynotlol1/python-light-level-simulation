@@ -58,7 +58,7 @@ def main():
                     case 1.0:
                         color = (255, 255, 0)
 
-                pygame.draw.rect(screen, color, (x_pos, y_pos, x_pos + 1, y_pos + 1))
+                pygame.draw.rect(screen, color, (x_pos, y_pos, 1, 1))
         pygame.display.update()
 
         keys = pygame.key.get_pressed()
